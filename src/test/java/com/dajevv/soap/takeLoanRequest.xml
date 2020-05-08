@@ -1,0 +1,15 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:loan="http://www.dajevv.com/soap/loanEligibility">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <loan:CustomerRequest>
+            <loan:customerName>Test</loan:customerName>
+            <loan:age>35</loan:age>
+            <loan:yearlyIncome>400000</loan:yearlyIncome>
+            <loan:requestedAmount>400000</loan:requestedAmount>
+            <loan:requestedRates>126</loan:requestedRates>
+            <loan:bikScore>700</loan:bikScore>
+            <loan:employmentMode>govt</loan:employmentMode>
+        </loan:CustomerRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

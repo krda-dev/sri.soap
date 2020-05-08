@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:gs="http://www.dajevv.com/soap/loanEligibility">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gs:getLoanRequest>
+            <gs:name>Filip</gs:name>
+        </gs:getLoanRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
