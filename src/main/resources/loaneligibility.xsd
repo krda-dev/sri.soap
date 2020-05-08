@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.dajevv.com/soap/loanEligibility"
+            xmlns:tns="http://www.dajevv.com/soap/loanEligibility"
+            elementFormDefault="qualified">
+
+    <xsd:element name="CustomerRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="customerName" type="xsd:string"/>
+                <xsd:element name="age" type="xsd:int"/>
+                <xsd:element name="yearlyIncome" type="xsd:long"/>
+                <xsd:element name="requestedAmount" type="xsd:long"/>
+                <xsd:element name="requestedRates" type="xsd:int"/>
+                <xsd:element name="bikScore" type="xsd:int"/>
+                <xsd:element name="employmentMode" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="Acknowledgement">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="isEligible" type="xsd:boolean"/>
+                <xsd:element name="approvedAmount" type="xsd:long"/>
+                <xsd:element name="CriteriaMismatch" type="xsd:string"
+                             maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getLoanRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="name" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getLoanResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Loan" type="tns:Loan"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="payLoanRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="name" type="xsd:string"/>
+                <xsd:element name="value" type="xsd:long"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="Loan">
+        <xsd:sequence>
+            <xsd:element name="holder" type="xsd:string"/>
+            <xsd:element name="totalAmount" type="xsd:long"/>
+            <xsd:element name="amountLeft" type="xsd:long"/>
+            <xsd:element name="noRates" type="xsd:int"/>
+            <xsd:element name="noRatesLeft" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
