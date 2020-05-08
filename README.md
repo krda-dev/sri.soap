@@ -1,4 +1,5 @@
 # sri.soap
+https://github.com/krda-dev/sri.soap
 projekt na poczet zadnia SOAP z przedmiotu SRI; wykonal s21429
 Aby wywolac endpointy nalezy skorzystac z aplikacji SoapUI i wywolac przykladowe requesty 
 zapisane w testach 'src/test/java/com/dajevv/soap/' na endpoint'cie: http://localhost:8080/ws
